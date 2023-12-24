@@ -89,6 +89,14 @@ let config = {
 			}
 		},
 		{
+            module: 'MMM-GoogleTasks',
+            header: "Google Tasks",
+            position: "top_left",
+            config: {
+                listID: "MDMxNzI2ODA2MDE0MDE3NDI2ODk6MDow",
+            }
+        },
+		{
 			module: 'MMM-GoogleCalendar',
 			header: "Google Calendar",
 			position: "top_left",
