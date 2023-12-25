@@ -170,6 +170,30 @@ let config = {
 				apiKey: 'e64ae7c9a6ef4b54873d3e194f66d871'
 			}
 		},
+		{
+			module: "MMM-GooglePhotos",
+			position: "bottom_center",
+			config: {
+				  albums: ["MagicMirror"], // Set your album name. like ["My wedding", "family share", "Travle to Paris"]
+				  updateInterval: 1000 * 5, // minimum 10 seconds.
+				  sort: "random", // "old", "random"
+				  uploadAlbum: null, // Only album created by `create_uploadable_album.js`.
+				  condition: {
+					  fromDate: null, // Or "2018-03", RFC ... format available
+					  toDate: null, // Or "2019-12-25",
+					  minWidth: null, // Or 400
+					  maxWidth: null, // Or 8000
+					  minHeight: null, // Or 400
+					  maxHeight: null, // Or 8000
+					  minWHRatio: null,
+					  maxWHRatio: null,
+					  // WHRatio = Width/Height ratio ( ==1 : Squared Photo,   < 1 : Portraited Photo, > 1 : Landscaped Photo)
+				  },
+				  showWidth: 600, // These values will be used for quality of downloaded photos to show. real size to show in your MagicMirror region is recommended.
+				  showHeight: 400,
+				  timeFormat: "YYYY/MM/DD HH:mm", // Or `relative` can be used.
+			}
+		  },
 		// {
 		// 	module: "compliments",
 		// 	position: "lower_third"
