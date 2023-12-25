@@ -12,7 +12,7 @@
  * see https://docs.magicmirror.builders/configuration/introduction.html#enviromnent-variables
  */
 let config = {
-	address: "localhost",	// Address to listen on, can be:
+	address: "0.0.0.0",	// Address to listen on, can be:
 							// - "localhost", "127.0.0.1", "::1" to listen on loopback interface
 							// - another specific IPv4/6 to listen on a specific interface
 							// - "0.0.0.0", "::" to listen on any interface
@@ -20,7 +20,7 @@ let config = {
 	port: 8080,
 	basePath: "/",			// The URL path where MagicMirror² is hosted. If you are using a Reverse proxy
 					  		// you must set the sub path here. basePath must end with a /
-	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"],	// Set [] to allow all IP addresses
+	ipWhitelist: [],	// Set [] to allow all IP addresses
 															// or add a specific IPv4 of 192.168.1.5 :
 															// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
 															// or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
@@ -47,6 +47,33 @@ let config = {
 		{
 			module: "clock",
 			position: "top_center"
+		},
+		{
+			module: "MMM-OnSpotify",
+			position: "top_center",
+			config: {
+				clientID: "b7b89b3b6dd845aa86946c9125162738",
+				clientSecret: "ca45bdb663cf4096bb9bdd0b27ffa316",
+				accessToken: "BQCrU-V3ba4SOKHFrI-V0bjuhWuT2QAxEomEeNn-7YjChn2sDzCBJatstrxHJJMb1B3FDQAtBaHQQu1VYGoUoZElTJoaaRd4I3BlDVnoR8bAMe1rLwtz2kCKzeYRjD3SWt33CFov08NjhfZfyiyLOaiCplePCGJnQ8XABB0EPcmEZ9uL5iymnYEwyX7NNmEY5WvLrmZmkw",
+				refreshToken: "AQAxy9zR2i5kNmxfmT0NOnO4EYKEzx_vgqVMVsoDhvb1LDvIlsXgJalNA9EBCICXdhB8qxcfcLqEWOOJCmbX2Rw-89AuiAMnKfRX_cryGICK4hoy4ylyUi3X7aImYXrF24o"
+				/* Add here your theming and behaviour configurations */
+			}
+		},
+		{
+			  module: "MMM-LiveLyrics",
+			  position: "fullscreen_below", // Do not change position
+			  config: {
+				  	accessToken: "sIDyDi9oiEfztTSbIVlD7zajbTmAwz1_QamYr0GZT3S6uvFn17_JSXTdrwW6XmtM",
+					// Module behaviour [See below]
+					showConnectionQrOnLoad: false,
+					startHidden: false,
+					sideBySideOnLandscape:true,
+					// Lyrics style [See below]
+					lyricsFillType: "container",
+					lyricsContainerBackdropStyle: "black",
+					lyricsStyleTheme: "dynamicColors",
+					lyricsTextAlign:"center",
+			}
 		},
 		{
 			module: "weather",
@@ -132,6 +159,15 @@ let config = {
 						calendarID: "en.usa#holiday@group.v.calendar.google.com"
 					},
 				],
+			}
+		},
+		{
+			module: 'MMM-Remote-Control',
+			// uncomment the following line to show the URL of the remote control on the mirror
+			// position: 'bottom_left',
+			// you can hide this module afterwards from the remote control itself
+			config: {
+				apiKey: 'e64ae7c9a6ef4b54873d3e194f66d871'
 			}
 		},
 		// {
