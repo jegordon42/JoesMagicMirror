@@ -13,6 +13,6 @@
 - Follow these [steps](https://github.com/randomBrainstormer/MMM-GoogleCalendar?tab=readme-ov-file) to include Google Calendar
 - Follow these [steps](https://github.com/jayked/MMM-GoogleTasks) to include Google Tasks
 - Follow these [steps](https://github.com/hermanho/MMM-GooglePhotos) to include Google Photos
-- Follow these [steps](https://github.com/No3x/MMM-GoogleDocs-Notes) to include Google Notes
+- Follow these [steps](https://github.com/No3x/MMM-GoogleDocs-Notes) to include Google Notes (Joe Couldn't get this to work)
 - Follow these [steps](https://github.com/Jopyth/MMM-Remote-Control) to include remote control
 - Run: npm run start
